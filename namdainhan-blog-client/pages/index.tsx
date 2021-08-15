@@ -1,8 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import Head from 'next/head';
+import Image from 'next/image';
+import withLayout from '../src/components/HOC/Layout';
+import styles from '../styles/Home.module.scss';
 
-export default function Home() {
+const HomePage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -20,3 +21,4 @@ export default function Home() {
     </div>
   )
 }
+export default withLayout(HomePage);
