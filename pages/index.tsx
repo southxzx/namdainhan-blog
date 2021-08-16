@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import withLayout from '../src/components/HOC/Layout';
-import styles from '../styles/Home.module.scss';
+import withLayout from '@Components/HOC/Layout';
+import styles from '../styles/index.module.scss';
 
 const HomePage = () => {
   return (
