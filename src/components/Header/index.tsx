@@ -24,7 +24,7 @@ const Header:FunctionComponent<HeaderProps> = () => {
         <Col md={12} lg={12}>
           <ul className={styles.listMenu}>
             {arrMenu.map((itemMenu) => (
-              <li key={itemMenu.key}>{itemMenu.name}</li>
+              <li key={itemMenu.key}><p>{itemMenu.name}</p></li>
             ))}
           </ul>
         </Col>
