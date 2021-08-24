@@ -1,6 +1,7 @@
 import React, { ComponentType } from "react";
 import { NextPageContext } from "next";
 import LayoutDefault from "../../../layouts/LayoutDefault";
+import { getCurrentLanguage } from "src/utils/server/getCurrentLanguage";
 
 const withLayout = (WrappedComponent: ComponentType) => {
   const Wrapper = () => {
@@ -13,7 +14,7 @@ const withLayout = (WrappedComponent: ComponentType) => {
     )
   }
   Wrapper.getInitialProps = (ctx: NextPageContext) => {
-    console.log(ctx);
+    getCurrentLanguage(ctx);
     return {
       
     };
