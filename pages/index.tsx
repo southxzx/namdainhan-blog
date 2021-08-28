@@ -12,7 +12,6 @@ const HomePage = () => {
       </Head>
 
       <main>
-        NAM DAI NHAN
       </main>
 
       <footer>
