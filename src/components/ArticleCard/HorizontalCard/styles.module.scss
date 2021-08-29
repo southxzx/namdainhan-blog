@@ -1,0 +1,27 @@
+.cardContainer{
+  display: flex;
+}
+.cardBody{
+  padding-right: 15px;
+  .cardContent{
+    min-height: 88px;
+  }
+  .title{
+    h5{
+      font-weight: 700;
+    }
+  }
+  .excerpt{
+    font-family: 'Roboto', sans-serif;
+  }
+}
+.cardBottomInfo{
+  display: flex;
+  justify-content: space-between;
+}
+.cardInfo{
+  display: flex;
+  .author{
+    font-weight: 700;
+  }
+}

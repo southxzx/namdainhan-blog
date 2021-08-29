@@ -9,7 +9,65 @@
 p{
   font-family: 'Raleway';
 }
-ul{
+ul, p{
   margin: 0;
   padding: 0;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Raleway';
+}
+h2,h3,h4{
+  font-weight:500;
+}
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 54px;
+  letter-spacing: 0.16px;
+  @media (max-width: 768px) {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 0px;
+  }
+}
+h2{
+  font-size: 32px;
+  line-height: 44px;
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+h3{
+  font-size:24px;
+  line-height:32px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+h4{
+  font-size:20px;
+  line-height: 28px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+h5{
+  font-size:16px;
+  line-height: 22px;
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+main{
+  padding-top: 10px;
+}
+.wrap-content {
+  width: 90%;
+  max-width: 1168px;
+  margin: 0 auto;
+  transition: translate 0.1s linear;
 }

@@ -21,6 +21,10 @@
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: all 0.3s;
+    p{
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
     &:hover{
       border-color: #4361ee;
       color: #4361ee;
@@ -33,4 +37,24 @@
   }
   text-align: center;
   padding-bottom: 25px;
+}
+.groupBtnLeft{
+  // padding-bottom: 10px;
+  button:last-child{
+    margin-left: 10px;
+  }
+}
+.groupBtnRight{
+  // padding-bottom: 10px;
+  float: right;
+  button:last-child{
+    margin-left: 10px;
+  }
+}
+.btnLanguage{
+  display: flex;
+  align-items: center;
+  svg:last-child{
+    margin-left: 5px;
+  }
 }

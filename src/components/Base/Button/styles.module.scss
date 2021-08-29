@@ -1,0 +1,41 @@
+@use "sass:map";
+
+$btn-sizes: (small: 24px, medium: 32px, large: 40px);
+
+%btn-padding {
+  padding: 8px;
+}
+%btn-radius {
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.btn{
+  @extend %btn-radius;
+  cursor: pointer;
+  text-align: center;
+  @each $size, $value in $btn-sizes {
+    &.btn-#{$size}{
+      @extend %btn-padding;
+      height: $value;
+    }
+  }
+  &_default{
+
+  }
+  &.justIcon{
+    background: none;
+    outline: none;
+    border: none;
+    transition: all 0.3s;
+    &:hover{
+      background-color: #f7f7f7;
+      svg{
+        fill: #4361EE;
+      }
+      path{
+        fill: #4361EE;
+      }
+    }
+  }
+}

@@ -4,13 +4,15 @@ import Header from '../src/components/Header';
 interface LayoutDefaultProps {
   children?: React.ReactNode;
 }
-const LayoutDefault:FunctionComponent<LayoutDefaultProps> = ({children}) => {
+const LayoutDefault: FunctionComponent<LayoutDefaultProps> = ({ children }) => {
   return (
     <div>
       <Header />
-      <div>
-        {children}
-      </div>
+      <main>
+        <div className="wrap-content">
+          {children}
+        </div>
+      </main>
     </div>
   )
 }
