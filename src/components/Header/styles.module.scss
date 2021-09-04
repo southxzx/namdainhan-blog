@@ -1,7 +1,16 @@
 .headerBlog{
   padding-top: 20px;
   margin-bottom: -1px;
-  border-bottom: 1px solid #757575;
+  border-bottom: 1px solid #cecece;
+  background-color: #fff;
+}
+.stickyHeader{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .logoBlog{
+    display: none;
+  }
 }
 .headerContent{
   width: 90%;

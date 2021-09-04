@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import { Row, Col, Popover } from 'antd';
 import { logo_main } from 'variables/image';
 import styles from './styles.module.scss';
 import SButton from '@Components/Base/Button';
 import { IconArrowDown, IconBritainFlag, IconDarkMode, IconSearch, IconUser } from '@Components/Base/ListSvg';
+import useIntersectionObserver from 'src/utils/hooks/useIntersectionObserver';
 
 interface HeaderProps {
 
@@ -23,9 +24,24 @@ const Header: FunctionComponent<HeaderProps> = () => {
       MM
     </div>
   );
+  const headerRef = useRef<HTMLDivElement | null>(null);
+  const [isVisibleStickyMenu, setVisibleStickyMenu] = useState<boolean>(false);
+
+  const showStickyMenu = (): void => {
+    const scrollPov = window?.pageYOffset;
+    if (headerRef && headerRef.current){
+      if (scrollPov >= headerRef.current.offsetTop){
+        setVisibleStickyMenu(true);
+      } else setVisibleStickyMenu(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', showStickyMenu)
+  })
 
   return (
-    <div className={styles.headerBlog}>
+    <div className={`${styles.headerBlog} ${isVisibleStickyMenu ? styles.stickyHeader : ''}`}>
       <div className={styles.headerContent}>
         <div className={styles.logoBlog}>
           <img src={logo_main} title="logo blog" alt="logo blog" />
@@ -69,6 +85,7 @@ const Header: FunctionComponent<HeaderProps> = () => {
           </Col>
         </Row>
       </div>
+      <div ref={headerRef} />
     </div>
   )
 }

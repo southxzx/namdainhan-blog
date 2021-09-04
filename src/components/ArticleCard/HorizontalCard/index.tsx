@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 import SButton from '@Components/Base/Button';
 import { IconBookmark } from '@Components/Base/ListSvg';
+import Dot from '@Components/Base/Dot';
 
 interface HorizontalCardProps {
 
@@ -20,7 +21,9 @@ const HorizontalCard: FunctionComponent<HorizontalCardProps> = () => {
         <div className={styles.cardBottomInfo}>
           <div className={styles.cardInfo}>
             <p className={styles.author}>Daniel Dang</p>
+            <Dot/>
             <p className={styles.duration}>6 min read</p>
+            <Dot/>
             <p className={styles.topic}>Self-taught</p>
           </div>
           <SButton
@@ -32,8 +35,10 @@ const HorizontalCard: FunctionComponent<HorizontalCardProps> = () => {
       <div className={styles.cardCover}>
         <Image
           src="https://miro.medium.com/fit/c/300/201/0*FjXAcqaJwbGxRLfV"
-          width={237}
-          height={135}
+          width={300}
+          height={200}
+          // layout="fill"
+          objectFit="cover"
           alt="You are Not Lazy or Undisciplined. You Have Internal Resistance."
         />
       </div>
